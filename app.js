@@ -16,8 +16,10 @@ app.post("/", (req, res) => {
 
 const generalRoutes = require("./controllers/general");
 app.use("/general", generalRoutes);
+
 const attractionsRoutes = require("./controllers/attractions");
 app.use("/attractions", attractionsRoutes);
+
 const placesRoutes = require("./controllers/places");
 app.use("/places", placesRoutes);
 

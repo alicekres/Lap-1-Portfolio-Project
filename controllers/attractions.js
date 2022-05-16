@@ -10,10 +10,10 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   try {
     const attractionsId = req.params.id;
-    const selectedattractions = attractionsData.find((x) => {
+    const selectedAttraction = attractionsData.find((x) => {
       return x.id == attractionsId;
     });
-    res.send(selectedAttractions);
+    res.send(selectedAttraction);
   } catch (err) {
     console.log(err);
     res.status(404).send(err);
