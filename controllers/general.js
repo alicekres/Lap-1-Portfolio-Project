@@ -1,17 +1,19 @@
 const express = require("express");
 const router = express.Router();
 const generalData = require("../data/generalData.json");
+const DataModel = require("../models/dataModel");
 
 router.get("/", (req, res) => {
   res.send(generalData);
-  /* res.send(generalData); */
 });
 
 router.get("/:id", (req, res) => {
   try {
-    const generalId = parseInt(req.params.id);
-    /* const selectedGeneral = general.findById(generalId);
-    res.send(selectedGeneral); */
+    const generalId = req.params.id;
+    const selectedGeneral = generalData.find((x) => {
+      return x.id == generalId;
+    });
+    res.send(selectedGeneral);
   } catch (err) {
     console.log(err);
     res.status(404).send(err);
@@ -19,9 +21,12 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  /* const data = req.body;
-  const newGeneral = general.create(data);
-  res.status(201).send(newGeneral); */
+  const newGeneralPost = req.body;
+  const newGeneral = DataModel.create({
+    ...newGeneralPost,
+    type: "generalData",
+  });
+  res.status(201).send(newGeneral);
 });
 
 router.delete("/:id", (req, res) => {
