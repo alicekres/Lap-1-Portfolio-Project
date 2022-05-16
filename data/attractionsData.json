@@ -3,17 +3,15 @@
     "id": "1",
     "title": "This is Attractions",
     "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "type": "attractionsData",
     "replies": [
       {
-        "id": 1.1,
         "body": "This is reply text"
       },
       {
-        "id": 1.2,
         "body": "This is reply text"
       },
       {
-        "id": 1.3,
         "body": "This is reply text"
       }
     ]
