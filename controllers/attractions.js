@@ -1,16 +1,19 @@
 const express = require("express");
 const router = express.Router();
+const attractionsData = require("../data/attractionsData.json");
+const DataModel = require("../models/dataModel");
 
 router.get("/", (req, res) => {
-  res.send("Hello world");
-  /* res.send(attractionsData); */
+  res.send(attractionsData);
 });
 
 router.get("/:id", (req, res) => {
   try {
-    const attractionsId = parseInt(req.params.id);
-    /* const selectedAttractions = attractions.findById(attractionsId);
-    res.send(selectedAttractions); */
+    const attractionsId = req.params.id;
+    const selectedattractions = attractionsData.find((x) => {
+      return x.id == attractionsId;
+    });
+    res.send(selectedAttractions);
   } catch (err) {
     console.log(err);
     res.status(404).send(err);
@@ -18,9 +21,12 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  /* const data = req.body;
-  const newAttractions = attractions.create(data);
-  res.status(201).send(newAttractions); */
+  const newAttractionsData = req.body;
+  const newAttraction = DataModel.create({
+    ...newAttractionsData,
+    type: "attractionsData",
+  });
+  res.status(201).send(newAttraction);
 });
 
 router.delete("/:id", (req, res) => {
