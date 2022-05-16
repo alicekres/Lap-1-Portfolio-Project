@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const generalData = require("../data/generalData.json");
 
 router.get("/", (req, res) => {
-  res.send("Hello world");
+  res.send(generalData);
   /* res.send(generalData); */
 });
 
