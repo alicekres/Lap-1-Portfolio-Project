@@ -13,7 +13,7 @@ router.get("/:id", (req, res) => {
     const selectedGeneral = generalData.find((x) => {
       return x.id == generalId;
     });
-    res.send(selectedGeneral);
+    res.status(200).send(selectedGeneral);
   } catch (err) {
     console.log(err);
     res.status(404).send(err);
@@ -22,6 +22,15 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const newGeneralPost = req.body;
+  const newGeneral = DataModel.create({
+    ...newGeneralPost,
+    type: "generalData",
+  });
+  res.status(201).send(newGeneral);
+});
+
+router.post("/reply", (req, res) => {
+  const newGeneralReply = req.body;
   const newGeneral = DataModel.create({
     ...newGeneralPost,
     type: "generalData",
