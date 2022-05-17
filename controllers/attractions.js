@@ -13,7 +13,8 @@ router.get("/:id", (req, res) => {
     const selectedAttraction = attractionsData.find((x) => {
       return x.id == attractionsId;
     });
-    res.send(selectedAttraction);
+
+    res.status(200).send(selectedAttraction);
   } catch (err) {
     console.log(err);
     res.status(404).send(err);
