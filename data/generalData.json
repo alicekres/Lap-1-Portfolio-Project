@@ -15,5 +15,56 @@
         "body": "This is reply text"
       }
     ]
+  },
+  {
+    "id": "2",
+    "title": "This is General 2",
+    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "type": "generalData",
+    "replies": [
+      {
+        "body": "This is reply text"
+      },
+      {
+        "body": "This is reply text"
+      },
+      {
+        "body": "This is reply text"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "This is General 3",
+    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "type": "generalData",
+    "replies": [
+      {
+        "body": "This is reply text"
+      },
+      {
+        "body": "This is reply text"
+      },
+      {
+        "body": "This is reply text"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "This is General 4",
+    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "type": "generalData",
+    "replies": [
+      {
+        "body": "This is reply text"
+      },
+      {
+        "body": "This is reply text"
+      },
+      {
+        "body": "This is reply text"
+      }
+    ]
   }
 ]
