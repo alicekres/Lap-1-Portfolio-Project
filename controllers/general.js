@@ -24,7 +24,7 @@ router.post("/", (req, res) => {
   const newGeneralPost = req.body;
   const newGeneral = DataModel.create({
     ...newGeneralPost,
-    type: "generalData",
+    type: "general",
   });
   res.status(201).send(newGeneral);
 });

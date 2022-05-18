@@ -25,7 +25,7 @@ router.post("/", (req, res) => {
   const newAttractionsData = req.body;
   const newAttraction = DataModel.create({
     ...newAttractionsData,
-    type: "attractionsData",
+    type: "attractions",
   });
   res.status(201).send(newAttraction);
 });
