@@ -13,7 +13,7 @@ router.get("/:id", (req, res) => {
     const selectedPlaces = placesData.find((x) => {
       return x.id == placesId;
     });
-    res.send(selectedPlaces);
+    res.status(200).send(selectedPlaces);
   } catch (err) {
     console.log(err);
     res.status(404).send(err);
@@ -24,6 +24,20 @@ router.post("/", (req, res) => {
   const newPlacesPost = req.body;
   const newPlace = DataModel.create({ ...newPlacesPost, type: "placesData" });
   res.status(201).send(newPlace);
+});
+
+router.patch("/:id", (req, res) => {
+  if (req.body.reactions) {
+    const placesId = req.params.id - 1;
+    let newEmojiCount = req.body.reactions - 1;
+    placesData[placesId].reactions[newEmojiCount]++;
+    res.send(placesData[placesId]);
+  } else if (req.body.reply) {
+    const placesId = req.params.id - 1;
+    let newReply = req.body.reply;
+    placesData[placesId].replies.unshift(newReply);
+    res.send(newReply);
+  }
 });
 
 router.delete("/:id", (req, res) => {

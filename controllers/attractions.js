@@ -13,7 +13,8 @@ router.get("/:id", (req, res) => {
     const selectedAttraction = attractionsData.find((x) => {
       return x.id == attractionsId;
     });
-    res.send(selectedAttraction);
+
+    res.status(200).send(selectedAttraction);
   } catch (err) {
     console.log(err);
     res.status(404).send(err);
@@ -27,6 +28,20 @@ router.post("/", (req, res) => {
     type: "attractionsData",
   });
   res.status(201).send(newAttraction);
+});
+
+router.patch("/:id", (req, res) => {
+  if (req.body.reactions) {
+    const attractionsId = req.params.id - 1;
+    let newEmojiCount = req.body.reactions - 1;
+    attractionsData[attractionsId].reactions[newEmojiCount]++;
+    res.send(attractionsData[attractionsId]);
+  } else if (req.body.reply) {
+    const attractionsId = req.params.id - 1;
+    let newReply = req.body.reply;
+    attractionsData[attractionsId].replies.unshift(newReply);
+    res.send(newReply);
+  }
 });
 
 router.delete("/:id", (req, res) => {
