@@ -10,6 +10,7 @@ class DataModel {
     this.title = data.title;
     this.body = data.body;
     this.type = data.type;
+    this.reactions = data.reactions;
   }
 
   /* static findById(id) {

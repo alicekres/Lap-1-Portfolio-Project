@@ -9,7 +9,8 @@
       "This is reply text",
       "This is reply text",
       "<img src='https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'>"
-    ]
+    ],
+    "reactions":[0, 0, 5]
   },
   {
     "id": "2",
@@ -20,7 +21,8 @@
       "This is reply text",
       "This is reply text",
       "This is reply text"
-    ]
+    ],
+    "reactions":[0, 3, 5]
   },
   {
     "id": "3",
@@ -31,7 +33,8 @@
       "This is reply text",
       "This is reply text",
       "This is reply text"
-    ]
+    ],
+    "reactions":[0, 1, 2]
   },
   {
     "id": "4",
@@ -42,6 +45,7 @@
       "This is reply text",
       "This is reply text",
       "This is reply text"
-    ]
+    ],
+    "reactions":[4, 3, 0]
   }
 ]

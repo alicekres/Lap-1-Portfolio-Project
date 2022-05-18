@@ -14,6 +14,7 @@
       {
         "body": "This is reply text"
       }
-    ]
+    ],
+    "reactions": [0, 5, 3]
   }
 ]
