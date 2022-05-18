@@ -11,6 +11,7 @@ class DataModel {
     this.body = data.body;
     this.type = data.type;
     this.reactions = data.reactions;
+    this.replies = data.replies;
   }
 
   /* static findById(id) {

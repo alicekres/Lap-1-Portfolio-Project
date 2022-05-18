@@ -26,6 +26,20 @@ router.post("/", (req, res) => {
   res.status(201).send(newPlace);
 });
 
+router.patch("/:id", (req, res) => {
+  if (req.body.reactions) {
+    const placesId = req.params.id - 1;
+    let newEmojiCount = req.body.reactions - 1;
+    placesData[placesId].reactions[newEmojiCount]++;
+    res.send(placesData[placesId]);
+  } else if (req.body.reply) {
+    const placesId = req.params.id - 1;
+    let newReply = req.body.reply;
+    placesData[placesId].replies.unshift(newReply);
+    res.send(newReply);
+  }
+});
+
 router.delete("/:id", (req, res) => {
   /* const placesId = parseInt(req.params.id);
   const placesToDestroy = places.findById(placesId);

@@ -38,14 +38,19 @@ router.post("/reply", (req, res) => {
   res.status(201).send(newGeneral);
 });
 
-router.patch("/:id", (req,res) => {
+router.patch("/:id", (req, res) => {
   if (req.body.reactions) {
-  const generalId = req.params.id - 1;
-  let newEmojiCount= req.body.reactions - 1;
-  generalData[generalId].reactions[newEmojiCount]++;
-  res.send(generalData[generalId]);
+    const generalId = req.params.id - 1;
+    let newEmojiCount = req.body.reactions - 1;
+    generalData[generalId].reactions[newEmojiCount]++;
+    res.send(generalData[generalId]);
+  } else if (req.body.reply) {
+    const generalId = req.params.id - 1;
+    let newReply = req.body.reply;
+    generalData[generalId].replies.unshift(newReply);
+    res.send(newReply);
   }
-})
+});
 
 router.delete("/:id", (req, res) => {
   /* const generalId = parseInt(req.params.id);
