@@ -3,6 +3,21 @@ const request = require('supertest');
 
 describe('server tests', () => {
   let api;
+  let testAtt = {
+    title : "Hi this is a server test",
+    body : "I hope this is posting in the way that it should",
+    type: "attractions"
+  }
+  let testGen = {
+    title : "Hi this is a server test",
+    body : "I hope this is posting in the way that it should",
+    type: "general"
+  }
+  let testPla = {
+    title : "Hi this is a server test",
+    body : "I hope this is posting in the way that it should",
+    type: "places"
+  }
   beforeAll(() => {
     api = app.listen(5000, () => {
       console.log('API test server is running');
@@ -54,28 +69,43 @@ describe('server tests', () => {
   });
 
   test('it responds to POST /attractions with status 201', (done) => {
-    request(api).post('/attractions').expect(201, done);
+    request(api)
+    .post('/attractions')
+    .send(testAtt)
+    .set('Accept', /application\/json/)
+    .expect(201)
+    .expect({ id: 5, ...testAtt }, done);
   });
 
   test('it responds to POST /general with status 201', (done) => {
-    request(api).post('/general').expect(201, done);
+    request(api)
+    .post('/general')
+    .send(testGen)
+    .set('Accept', /application\/json/)
+    .expect(201)
+    .expect({ id: 3, ...testGen }, done);
   });
 
   test('it responds to POST /places with status 201', (done) => {
-    request(api).post('/places').expect(201, done);
+    request(api)
+    .post('/places')
+    .send(testPla)
+    .set('Accept', /application\/json/)
+    .expect(201)
+    .expect({ id: 5, ...testPla }, done);
   });
 
-  test('it responds to PATCH /attractions with status 200', (done) => {
-    request(api).post('/attractions').expect(201, done);
-  });
+  // test('it responds to PATCH /attractions with status 200', (done) => {
+  //   request(api).post('/attractions').expect(201, done);
+  // });
 
-  test('it responds to PATCH /general with status 200', (done) => {
-    request(api).post('/general').expect(201, done);
-  });
+  // test('it responds to PATCH /general with status 200', (done) => {
+  //   request(api).post('/general').expect(201, done);
+  // });
 
-  test('it responds to PATCH /places with status 200', (done) => {
-    request(api).post('/places').expect(201, done);
-  });
+  // test('it responds to PATCH /places with status 200', (done) => {
+  //   request(api).post('/places').expect(201, done);
+  // });
 
   afterAll((done) => {
     console.log('API test server is now closing');
