@@ -22,7 +22,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const newPlacesPost = req.body;
-  const newPlace = DataModel.create({ ...newPlacesPost, type: "placesData" });
+  const newPlace = DataModel.create({ ...newPlacesPost, type: "places" });
   res.status(201).send(newPlace);
 });
 
