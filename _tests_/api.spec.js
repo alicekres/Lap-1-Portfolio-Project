@@ -1,4 +1,3 @@
-
 const app = require('../app');
 const request = require('supertest');
 
@@ -66,9 +65,20 @@ describe('server tests', () => {
     request(api).post('/places').expect(201, done);
   });
 
+  test('it responds to PATCH /attractions with status 200', (done) => {
+    request(api).post('/attractions').expect(201, done);
+  });
+
+  test('it responds to PATCH /general with status 200', (done) => {
+    request(api).post('/general').expect(201, done);
+  });
+
+  test('it responds to PATCH /places with status 200', (done) => {
+    request(api).post('/places').expect(201, done);
+  });
+
   afterAll((done) => {
     console.log('API test server is now closing');
     api.close(done);
   });
 });
-
