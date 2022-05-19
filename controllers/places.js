@@ -1,32 +1,36 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const placesData = require("../data/placesData.json");
-const DataModel = require("../models/dataModel");
+const placesData = require('../data/placesData.json');
+const DataModel = require('../models/dataModel');
 
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   res.send(placesData);
 });
 
-router.get("/:id", (req, res) => {
+router.get('/:id', (req, res) => {
   try {
     const placesId = req.params.id;
-    const selectedPlaces = placesData.find((x) => {
-      return x.id == placesId;
-    });
-    res.status(200).send(selectedPlaces);
+    if (placesId <= placesData.length && placesId > 0) {
+      let selectedPlaces = placesData.find((x) => {
+        return x.id == placesId;
+      });
+      res.status(200).send(selectedPlaces);
+    } else {
+      throw err;
+    }
   } catch (err) {
     console.log(err);
-    res.status(404).send(err);
+    res.status(404).send('This data does not exist');
   }
 });
 
-router.post("/", (req, res) => {
+router.post('/', (req, res) => {
   const newPlacesPost = req.body;
-  const newPlace = DataModel.create({ ...newPlacesPost, type: "places" });
+  const newPlace = DataModel.create({ ...newPlacesPost, type: 'places' });
   res.status(201).send(newPlace);
 });
 
-router.patch("/:id", (req, res) => {
+router.patch('/:id', (req, res) => {
   if (req.body.reactions) {
     const placesId = req.params.id - 1;
     let newEmojiCount = req.body.reactions - 1;
@@ -40,7 +44,7 @@ router.patch("/:id", (req, res) => {
   }
 });
 
-router.delete("/:id", (req, res) => {
+router.delete('/:id', (req, res) => {
   /* const placesId = parseInt(req.params.id);
   const placesToDestroy = places.findById(placesId);
   placesToDestroy.destroy();
