@@ -1,51 +1,49 @@
 [
   {
     "id": "1",
-    "title": "Tips for coming to London for the first time AT",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "Tips for people from France",
+    "body": "Bonjour, I was wondering if anyone could recommend places for me to visit while I'm in London",
     "type": "attractions",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text",
-      "<img src='https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'>"
+      "Visit Buckingham Palace! The guardsmen are as stiff as the French",
+      "I would recommend vising covent garden...they have some nice restaurants you might appreciate!",
+      "Do you like to shop? Visit Oxford Circus...maybe ride a red bus"
     ],
-    "reactions": [0, 0, 5]
+    "reactions": [8, 3, 5]
   },
   {
     "id": "2",
-    "title": "This is Attractions 2",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "The London Eye",
+    "body": "Hi I recently visited the London Eye and thought it was amazing! We were lucky to have a beautiful clear day.",
     "type": "attractions",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text"
+      "I wasn't so lucky when I visited :(",
+      "Did you go on the Thames River Cruise? I recommend doing them both as they are in the same location.",
+      "The London Eye is just an overpriced ferris wheel...not worth the money!!"
     ],
-    "reactions": [0, 3, 5]
+    "reactions": [7, 9, 4]
   },
   {
     "id": "3",
-    "title": "This is Attractions 3",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "The Shard",
+    "body": "We stayed in the Shangri-La Suite and it just about met my high standards",
     "type": "attractions",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text"
+      "You sound like a right snob!",
+      "We had dinner in the Ting restaurant...highly recommended",
+      "The view from the Shard is a great experience!"
     ],
-    "reactions": [0, 1, 2]
+    "reactions": [2, 20, 10]
   },
   {
     "id": "4",
-    "title": "This is Attractions 4",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "The O2 Arena",
+    "body": "The O2 doesn't seem to be as good as when it first opened",
     "type": "attractions",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text"
+      "Walking over the O2 was a memorable experience...rather windy though!"
+      
     ],
-    "reactions": [4, 3, 0]
+    "reactions": [12, 0, 3]
   }
 ]
