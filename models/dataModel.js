@@ -10,6 +10,8 @@ class DataModel {
     this.title = data.title;
     this.body = data.body;
     this.type = data.type;
+    this.reactions = data.reactions;
+    this.replies = data.replies;
   }
 
   /* static findById(id) {
@@ -23,9 +25,9 @@ class DataModel {
   } */
 
   static create(data) {
-    const newId = eval(data.type).length + 1;
+    const newId = eval(`${data.type}Data`).length + 1;
     const newData = new DataModel({ id: newId, ...data });
-    eval(data.type).push(newData);
+    eval(`${data.type}Data`).push(newData);
     return newData;
   }
 

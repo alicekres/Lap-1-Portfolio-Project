@@ -13,7 +13,7 @@ router.get("/:id", (req, res) => {
     const selectedGeneral = generalData.find((x) => {
       return x.id == generalId;
     });
-    res.send(selectedGeneral);
+    res.status(200).send(selectedGeneral);
   } catch (err) {
     console.log(err);
     res.status(404).send(err);
@@ -24,9 +24,32 @@ router.post("/", (req, res) => {
   const newGeneralPost = req.body;
   const newGeneral = DataModel.create({
     ...newGeneralPost,
+    type: "general",
+  });
+  res.status(201).send(newGeneral);
+});
+
+router.post("/reply", (req, res) => {
+  const newGeneralReply = req.body;
+  const newGeneral = DataModel.create({
+    ...newGeneralPost,
     type: "generalData",
   });
   res.status(201).send(newGeneral);
+});
+
+router.patch("/:id", (req, res) => {
+  if (req.body.reactions) {
+    const generalId = req.params.id - 1;
+    let newEmojiCount = req.body.reactions - 1;
+    generalData[generalId].reactions[newEmojiCount]++;
+    res.send(generalData[generalId]);
+  } else if (req.body.reply) {
+    const generalId = req.params.id - 1;
+    let newReply = req.body.reply;
+    generalData[generalId].replies.unshift(newReply);
+    res.send(newReply);
+  }
 });
 
 router.delete("/:id", (req, res) => {
