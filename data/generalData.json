@@ -1,51 +1,25 @@
 [
   {
     "id": "1",
-    "title": "Tips for coming to London for the first time GE",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "Tips for coming to London for the first time!",
+    "body": "Hi guys! I am visiting London for the first time next week (I am from the US), and wondering if there are any great tips you have? Places to see/not to see etc.",
     "type": "general",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text",
-      "<img src='https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'>"
+      "Hey, London is great this time of year. I recommend going to the Tower of London and there are also some great cafes near there.",
+      "Ignore that guy ^^, you will have a great time, stay at a hostel to meet lots of new people! ",
+      "Another typical American abroad..., you won't get shot here atleast"
     ],
-    "reactions": [0, 0, 5]
+    "reactions": [3, 2, 3]
   },
   {
     "id": "2",
-    "title": "This is General 2",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "Places to eat",
+    "body": "Hi guys, where are some great places to eat in London?",
     "type": "general",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text"
+      "We literally have a thread for that, can you not read??",
+      "Wrong thread buddy..."
     ],
-    "reactions": [0, 3, 5]
-  },
-  {
-    "id": "3",
-    "title": "This is General 3",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
-    "type": "general",
-    "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text"
-    ],
-    "reactions": [0, 1, 2]
-  },
-  {
-    "id": "4",
-    "title": "This is General 4",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
-    "type": "general",
-    "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text"
-    ],
-    "reactions": [4, 3, 0]
+    "reactions": [1, 9, 0]
   }
 ]
