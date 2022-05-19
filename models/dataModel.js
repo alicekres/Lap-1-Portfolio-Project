@@ -25,9 +25,9 @@ class DataModel {
   } */
 
   static create(data) {
-    const newId = eval(data.type).length + 1;
+    const newId = eval(`${data.type}Data`).length + 1;
     const newData = new DataModel({ id: newId, ...data });
-    eval(data.type).push(newData);
+    eval(`${data.type}Data`).push(newData);
     return newData;
   }
 
