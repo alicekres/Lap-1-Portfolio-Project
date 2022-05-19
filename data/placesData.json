@@ -27,11 +27,7 @@
     "title": "The Clermont London, Charing Cross hotel",
     "body": "Amazing place. Beautiful view, in the centre of London, the river is walking distance. Rooms really clean and food for an hotel really good.",
     "type": "places",
-    "replies": [
-      "Expensive but good.",
-      "This is reply text",
-      "This is reply text"
-    ],
+    "replies": ["Expensive but good."],
     "reactions": [0, 1, 2]
   },
   {
