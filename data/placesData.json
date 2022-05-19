@@ -1,36 +1,34 @@
 [
   {
     "id": "1",
-    "title": "Tips for coming to London for the first time PL",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "Lisboeta restaurant in London",
+    "body": "Another day when I was visiting London with my family we found this awesome portuguese restaurant and I was so pleased with their welcoming attitude and service that I just had to leave a comment. Never commented on anything here before! Awesome food as well. Well done!",
     "type": "places",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text",
-      "<img src='https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'>"
+      "Interesting. Last time when I visited it was crowded, food was cold and average. For that money - disappointed...",
+      "Yes, I had an awesome experience as well. The staff was really enthusiastic and food with mediterranean vibe"
     ],
-    "reactions": [0, 0, 5]
+    "reactions": [2, 8, 7]
   },
   {
     "id": "2",
-    "title": "This is General 2",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "Britannia The International Hotel London, Canary Wharf",
+    "body": "Eeeh, it was cheaper than some other hotels but not worth even that. The room literally stank, it felt like bed linen hadn't been changed. You go on your own risk.",
     "type": "places",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text"
+      "It was OK. Food average, nice view over London from my room window",
+      "Never again.",
+      "A bit too expensive for my liking."
     ],
-    "reactions": [0, 3, 5]
+    "reactions": [1, 5, 2]
   },
   {
     "id": "3",
-    "title": "This is General 3",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "The Clermont London, Charing Cross hotel",
+    "body": "Amazing place. Beautiful view, in the centre of London, the river is walking distance. Rooms really clean and food for an hotel really good.",
     "type": "places",
     "replies": [
-      "This is reply text",
+      "Expensive but good.",
       "This is reply text",
       "This is reply text"
     ],
@@ -38,14 +36,14 @@
   },
   {
     "id": "4",
-    "title": "This is General 4",
-    "body": "Hello this is the first topic, this is a paragraph about that topic and this is interesting",
+    "title": "Petersham Nurseries, Covent Garden restaurant",
+    "body": "Amazing, awesome, that's all what I say.",
     "type": "places",
     "replies": [
-      "This is reply text",
-      "This is reply text",
-      "This is reply text"
+      "Nice venue however in my opinion too expensive, food was good but I was still hungry when I left",
+      "Nice place",
+      "There was some strage smell when I visited, don't know, was expecting something was upperclass"
     ],
-    "reactions": [4, 3, 0]
+    "reactions": [4, 3, 10]
   }
 ]
